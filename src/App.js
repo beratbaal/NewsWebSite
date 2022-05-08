@@ -7,7 +7,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
 
 function App() {
-    const [topNewsList,setTopNewsList]=useState(["",]);
+    const [topNewsList,setTopNewsList]=useState([]);
     useEffect(()=>{
       ApiFetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=bdff393e72104f87a7accf76c2b070a6',setTopNewsList);
 
