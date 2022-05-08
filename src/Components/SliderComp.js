@@ -3,7 +3,7 @@ import "../CSS/Slider.css";
 
 
 function SliderComp({
-    newstitle,newsdescreption,newsposter
+    newstitle,newsdescreption
 }){
   
     return(

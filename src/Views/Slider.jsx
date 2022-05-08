@@ -36,14 +36,12 @@ export class Slider extends React.Component {
                 </div>
                 
               </div>
-              
               {
-                
                 this.props.news.slice(1,10).map((object)=>{
-                
-                   return  <SliderComp newstitle={object.title} newsposter={object.urlToImage} newsdescreption={object.descreption}/>
+                  return <SliderComp newstitle={object.title} newsdescreption={object.descreption}/>
                 })
               }
+            
           
             </div>
         
