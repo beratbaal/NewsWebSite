@@ -7,29 +7,30 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
 
 function App() {
-    const [topNewsList,setTopNewsList]=useState([]);
-    useEffect(()=>{
-      ApiFetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=bdff393e72104f87a7accf76c2b070a6',setTopNewsList);
+    const[topNews, setTopNews] = useState([]);
 
-    },[]);
-
-    function ApiFetch(url,setList){
-      fetch(url
-        ).then(response=>{
-          return response.json();
-        }).then(data=>{
-          const news = data["results"];
-          setList(news)
-          console.log(news)
-        })
-    }
- 
+  useEffect(() => {
+     fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=bdff393e72104f87a7accf76c2b070a6')
+    .then(response => response.json())
+    .then(response=>setTopNews(Object.values(response.articles)))
+    
+  },[])
+  console.log(topNews)
+   
   function MainPage() {
 
     return (
       <div>
         <NavBar />
-        <Slider news={topNewsList.slice(10)}/>
+        {
+          topNews.map((news)=>{
+            return(
+              <div key={news.title}>
+                <h2>{news.title}</h2>
+              </div>
+            )
+          })
+        }
       
        
       </div>
