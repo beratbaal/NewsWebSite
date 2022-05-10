@@ -32,7 +32,7 @@ export class Slider extends React.Component {
         <div className="carousel-inner">
 
           <div className="item active">
-            
+            <img src={titleobject==null?false:titleobject.urlToImage}/>
             <div className="carousel-caption">
               <h3>{titleobject==null?false:titleobject.title}</h3>
               <p>{titleobject==null?false:titleobject.description}</p>
@@ -42,7 +42,7 @@ export class Slider extends React.Component {
         {
           this.props.news==null?<p>loading</p>:
                     this.props.news.slice(1,10).map(object=>{
-            return <SliderComp newstitle={object.title} newsdescreption={object.description}  />
+            return <SliderComp newstitle={object.title} newsdescreption={object.description} newsposter={object.urlToImage}   />
           })
         }
 

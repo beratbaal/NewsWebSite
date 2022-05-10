@@ -28,7 +28,7 @@ function App() {
     return (
       <div>
         <NavBar />
-       {topNews==[]?<p>loading</p>:<Slider news={topNews}/>} 
+       {topNews==[]?<p>loading</p>:<Slider news={topNews.slice(10)}/>} 
       
        
       </div>

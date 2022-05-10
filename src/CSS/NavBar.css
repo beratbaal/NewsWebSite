@@ -1,20 +1,41 @@
-.mainnavbardiv{
+.mainNavBarDiv{
+    position: absolute;
     width: 100%;
     z-index: 1;
- 
-}
-.logo{
-    width: 64px;
-    height: 64px;
-}
-.d-flex{
-    float: right;
-}
-.navbarcustom{
-    background-color: #a40c16;
     
 }
 
+.logo{
+    height: 41.34px;
+    width: 60px;
+}
+.secIzle{
+    height: 33px;
+    width:33px;
+    margin: 0 10px;
+}
+.text{
+    margin: 5px auto;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    color: white;
+}
+
+.d-flex{
+    float: right;
+}
+
+.navbarcustom{
+    background-color: #B50043;
+    margin-bottom: 0px;
+    
+    
+}
+.customList{
+ 
+    height: 90px;
+   
+}
 ul{
     list-style-type: none;
     margin: 0;
@@ -40,5 +61,86 @@ li a:hover{
     font-weight:500;
     text-decoration: none;
     color: white;
+}
+
+.carousel-indicators{
+    z-index: 1;
+}
+@media (max-width:770px){
+    .navbar-nav{
+        margin-left: 2%;
+    }
+}
+@media (max-width:575px){
+    .navbar-toggler{
+      position: relative;
+      right: 250px;
+      bottom: 10px;
+    
+    }
+    .logo{
+        position: relative;
+        left: 22%;
+    }
+    .searchButton{
+        position: absolute;
+        margin-left: 10%;
+        margin-top: -8px;
+    }
+ 
+    .carousel-indicators{
+        z-index: 0;
+    }
+  .banaOzel{
+      position: relative;
+      top: 30px;
+  }
+  .tvIzle{
+      position: relative;
+      top: 30px;
+  }
+  .secIzle{
+      position: relative;
+      top: 30px;
+  }
+  .text{
+    position: relative;
+    right: 30%;
+  }
+ 
+}
+.menucustom{
+    background-color: #212121;
+    margin: 0 !important;
+    padding-top: 10px;
+    height: 50px;
+    width: 100%;
+}
+
+
+@media (max-width:1200px){
+    .customList{
+        display: none;
+    }
+}
+
+@media (max-width:400px){
+    .navbar-toggler{
+        margin-left: 30%;
+    }
+    .searchButton{
+        margin-left: 2%;
+    }
+    .logo{
+        position: relative;
+        left: 30%;
+    }
+   .navbar-nav{
+       margin-left: -5%;
+   }
+   .searchButton{
+       display: none;
+   }
+   
 }
 
