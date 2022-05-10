@@ -8,7 +8,7 @@ function SliderComp({
   
     return(
         <div className="item">
-       
+        <h1>{newstitle}</h1>
         <div className="carousel-caption">
           <h3 className="newstitlecustom">{newstitle}</h3>
           <p className="newsdescreption">{newsdescreption}</p>

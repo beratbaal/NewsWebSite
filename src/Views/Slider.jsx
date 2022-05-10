@@ -3,11 +3,14 @@ import "../CSS/Slider.css";
 import SliderComp from "../Components/SliderComp";
 
 
+
 export class Slider extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
+    const titleobject = this.props.news[0];
+    console.log(titleobject==null?false:titleobject.title);
     return (
       <div id="myCarousel" className="carousel slide myCarousel  " data-ride="carousel">
 
@@ -29,16 +32,17 @@ export class Slider extends React.Component {
         <div className="carousel-inner">
 
           <div className="item active">
-
+            
             <div className="carousel-caption">
-              <h3>{this.props.news[0].title}</h3>
-              <p>{this.props.news[0].descreption}</p>
+              <h3>{titleobject==null?false:titleobject.title}</h3>
+              <p>{titleobject==null?false:titleobject.description}</p>
             </div>
 
           </div>
         {
-          this.props.news.slice(1,10).map(object=>{
-            return <SliderComp newstitle={object.title} newsdescreption={object.descreption}/>
+          this.props.news==null?<p>loading</p>:
+                    this.props.news.slice(1,10).map(object=>{
+            return <SliderComp newstitle={object.title} newsdescreption={object.description}  />
           })
         }
 

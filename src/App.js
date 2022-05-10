@@ -9,28 +9,26 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 function App() {
     const[topNews, setTopNews] = useState([]);
 
-  useEffect(() => {
-     fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=bdff393e72104f87a7accf76c2b070a6')
-    .then(response => response.json())
-    .then(response=>setTopNews(Object.values(response.articles)))
-    
-  },[])
-  console.log(topNews)
+  useEffect(()=>{
+    Apifetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=bdff393e72104f87a7accf76c2b070a6',setTopNews);
+  },[]);
+  function Apifetch(url, setList){
+    fetch(url)
+    .then(response=>{
+      return response.json();
+    }).then(response=>{
+      const news = Object.values(response.articles)
+      setList(news);
+      console.log(news);
+    })
+  }
    
   function MainPage() {
 
     return (
       <div>
         <NavBar />
-        {
-          topNews.map((news)=>{
-            return(
-              <div key={news.title}>
-                <h2>{news.title}</h2>
-              </div>
-            )
-          })
-        }
+       {topNews==[]?<p>loading</p>:<Slider news={topNews}/>} 
       
        
       </div>
