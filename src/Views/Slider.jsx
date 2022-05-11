@@ -32,7 +32,7 @@ export class Slider extends React.Component {
         <div className="carousel-inner">
 
           <div className="item active">
-            <img src={titleobject==null?false:titleobject.urlToImage}/>
+            <img src={titleobject==null?false:titleobject.urlToImage} className="imagecustom"/>
             <div className="carousel-caption">
               <h3>{titleobject==null?false:titleobject.title}</h3>
               <p>{titleobject==null?false:titleobject.description}</p>

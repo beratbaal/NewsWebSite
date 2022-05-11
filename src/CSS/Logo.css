@@ -18,13 +18,21 @@
 }
 @media (max-width:575px){
     .logodefault{
-        position: relative;
-        left: 22%;
+       position: relative;
+       left: 83px;
     }
 }
 @media (max-width:400px){
     .logodefault{
-        position: relative;
-        left: 30%;
+      position: relative;
+      left: 55px;
+    }
+    .logolinkedin{
+        height: 32px;
+        width: 32px;
+    }
+    .logogithub{
+        height: 32px;
+        width: 32px;
     }
 }
