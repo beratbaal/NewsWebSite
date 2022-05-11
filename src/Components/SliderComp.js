@@ -11,7 +11,7 @@ function SliderComp({
         <img src={newsposter}/>
         <div className="carousel-caption">
           <h3 className="newstitlecustom">{newstitle}</h3>
-          <p className="newsdescreption">{newsdescreption}</p>
+          <p className="newsdescription">{newsdescreption}</p>
         </div>
       </div>
     );

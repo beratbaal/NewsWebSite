@@ -2,7 +2,8 @@ import './App.css';
 import React, {useEffect, useState} from "react";
 import { NavBar } from "./Views/NavBar";
 import { Slider } from './Views/Slider';
-
+import { CardView } from './Views/CardView';
+import { Footer } from './Views/Footer';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 
 
@@ -29,8 +30,9 @@ function App() {
       <div>
         <NavBar />
        {topNews==[]?<p>loading</p>:<Slider news={topNews.slice(10)}/>} 
-      
+       <CardView news={topNews}/>
        
+       <Footer/>
       </div>
     );
 

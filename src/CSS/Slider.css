@@ -1,22 +1,6 @@
 .carousel-caption{
   position: absolute;
 }
-
-.movienamecustom{
-  position:absolute;
-  margin: -50px -100px -150px 20px;
-  font-weight: 600;
-  margin-left: -150px;
-  letter-spacing: .2px;
-  font-family: 'Proxima Nova Semibold',proxima-nova-semibold,Arial,Helvetica,sans-serif!important;
-  font-size: 40px;  
-  
-}
-.moviedescreptioncustom{
-  position: relative;
-  top:50px;
-  font-weight: 500;
-}
 .myCarousel{
   width: 100%;
   height:auto;
@@ -25,22 +9,11 @@
   width: 100%;
   max-height: 550px;
 }
-@media (max-width:1200px){
-  .movienamecustom{
-    font-size: 15px;
-    left: 20px;
-    top:-40px;
-    position:relative ;
-  }
-  .moviedescreptioncustom{
-    font-size: 8px;
-    margin-top: 80px;
-  }
-  
+.newstitlecustom{
+  color: #B50043;
+  font-weight: 900;
 }
-@media (max-width:400px){
-  .moviedescreptioncustom{
-    display: none;
-  }
-  
+.newsdescription{
+
+  font-weight: 500;
 }

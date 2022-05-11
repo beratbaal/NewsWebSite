@@ -1,0 +1,25 @@
+.card{
+    width: 25% !important;
+    height: 400px !important;
+    float: left;
+}
+.card-title{
+    width: 100%;
+    height: 10px;
+   
+}
+.card-text{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: 30px;
+}
+.card-img-top{
+    width: 100%;
+    height: 200px;
+}
+.btn{
+    margin-top: 15%;
+    margin-left: 35%;
+
+}

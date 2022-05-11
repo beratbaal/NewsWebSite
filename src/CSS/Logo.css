@@ -1,0 +1,30 @@
+.logodefault{
+    height: 41.34px;
+    width: 60px;
+}
+.logofooter{
+    height: auto;
+    width: auto;
+}
+.logolinkedin{
+   height: 64px;
+   width: 64px;
+   margin-left: 35%;
+}
+.logogithub{
+    height: 64px;
+    width: 64px;
+    margin-left: 5%
+}
+@media (max-width:575px){
+    .logodefault{
+        position: relative;
+        left: 22%;
+    }
+}
+@media (max-width:400px){
+    .logodefault{
+        position: relative;
+        left: 30%;
+    }
+}
