@@ -12,7 +12,7 @@ export class CardView extends React.Component {
                 {
                    
                     this.props.news.map(object=>{
-                        return <CardComp newstitle={object.title}  newsdescription={object.description} newsimage={object.urlToImage}/>
+                        return <CardComp title={object.title}  description={object.description} imageToUrl={object.urlToImage} />
                     })
                 }
             </>

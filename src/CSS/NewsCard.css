@@ -58,6 +58,14 @@
 }
 @media(max-width:400px){
     .btn{
-        margin-top: 10%;
+        margin-top: 12%;
+    }
+    .card-text{
+       position: relative;
+       top: 20px;
+    }
+    .card-title{
+        position: relative;
+        top: -10px;
     }
 }

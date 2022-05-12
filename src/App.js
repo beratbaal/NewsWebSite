@@ -3,8 +3,10 @@ import React, {useEffect, useState} from "react";
 import { NavBar } from "./Views/NavBar";
 import { Slider } from './Views/Slider';
 import { CardView } from './Views/CardView';
+import NewsInfo from './Components/NewsInfo';
 import { Footer } from './Views/Footer';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { SelectedNewsContextProvider } from './Context/NewsContext';
 
 
 function App() {
@@ -39,9 +41,12 @@ function App() {
   }
   return (
     <BrowserRouter>
+    <SelectedNewsContextProvider>
       <Routes>
         <Route index path="/" element={<MainPage />} />
+        <Route index path='/NewsInfo' element={<NewsInfo/>}/>
       </Routes>
+      </SelectedNewsContextProvider>
     </BrowserRouter>
   );
 
