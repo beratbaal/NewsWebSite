@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import SelectedNewsContext from "../Context/NewsContext";
 
 function CardComp({
-    title,description,imageToUrl,content
+    title,description,imageToUrl,content,url
 }) {
         const selectedNews = useContext(SelectedNewsContext);
         function clickNews(){
@@ -16,7 +16,7 @@ function CardComp({
             
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{description}</p>
-               <Link to={"/NewsInfo"} onClick={clickNews}><a href="#" className="btn btn-primary">Habere Git</a></Link> 
+              <a href={url} className="btn btn-primary">Habere Git</a>
             </div>
         </div>
     )
