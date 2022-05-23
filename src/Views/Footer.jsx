@@ -9,7 +9,7 @@ export class Footer extends React.Component {
     render(){
         return(
             <div className="customfooter">
-            <Logo logoImage="https://cdn-icons.flaticon.com/png/128/2692/premium/2692815.png?token=exp=1652290092~hmac=7dc782ca6ee8cda0a1255fedded48636" logoStyle="logofooter"></Logo>
+            <Logo logoImage="https://cdn-icons.flaticon.com/png/512/2692/premium/2692815.png?token=exp=1653327582~hmac=507e76530e287f357496be961039003b" logoStyle="logofooter"></Logo>
            
                 
            <Logo logoImage="https://cdn-icons-png.flaticon.com/128/1384/1384014.png" logoStyle="logolinkedin" logoUrl="https://www.linkedin.com/in/berat-bal-32b652174/"></Logo>

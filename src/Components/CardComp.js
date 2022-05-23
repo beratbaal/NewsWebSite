@@ -1,14 +1,11 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom';
-import SelectedNewsContext from "../Context/NewsContext";
+
+
 
 function CardComp({
-    title,description,imageToUrl,content,url
+    title,description,imageToUrl,url
 }) {
-        const selectedNews = useContext(SelectedNewsContext);
-        function clickNews(){
-            selectedNews.selectNews(title,description,imageToUrl,content);
-        }
+        
     return (
         <div className="card">
             <img className="card-img-top" src={imageToUrl}/>

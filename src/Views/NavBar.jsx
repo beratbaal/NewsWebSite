@@ -1,6 +1,7 @@
 import React from "react";
 import "../CSS/NavBar.css";
 import { Logo } from "../Components/Logo";
+import { Link } from "react-router-dom";
 
 export class NavBar extends React.Component{
     constructor(props){
@@ -20,14 +21,10 @@ export class NavBar extends React.Component{
                        
                         <div className="collapse navbar-collapse" id="mynavbar">
                             <ul className="navbar-nav me-auto">
-                             <li ><a href="#">Gündem</a></li>
-                             <li ><a href="#">Siyaset</a></li>
-                             <li ><a href="#">Teknoloji</a></li>
-                             <li ><a href="#">Spor</a></li>
+                             <Link to={"/Agenda"}><li ><a href="#">Gündem</a></li></Link>
+                             <Link to={"/Politics"}><li ><a href="#">Siyaset</a></li></Link>
+                             <Link to={"/Techno"}><li ><a href="#">Teknoloji</a></li></Link>
                             </ul>
-                            
-                          
-                              
                         </div>
     
                     </div>

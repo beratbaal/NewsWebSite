@@ -1,6 +1,7 @@
 import React from "react";
 import "../CSS/NewsCard.css";
 import CardComp from "../Components/CardComp";
+import { NavBar } from "./NavBar";
 
 export class CardView extends React.Component {
     constructor(props) {
@@ -9,6 +10,7 @@ export class CardView extends React.Component {
     render(){
         return(
             <>
+        
                 {
                    
                     this.props.news.map(object=>{
